@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name = "askprogramming">
+	
+    	<category>
+    	    <pattern>yes</pattern>
+    	    <template>Great!<br/>Would you rather work with Apps or Web?<think><set name="topic">AppOrWeb</set></think>
+    	        <button>
+    	            <text>Apps</text>
+    	            <postback>Apps</postback>
+                </button>
+                <button>
+                    <text>Web</text>
+                    <postback>Web</postback>
+                </button>
+    	    </template>
+        </category>
+        
+        <category>
+            <pattern>no</pattern>
+            <template>Alright.<br/>Do you like Design?<think><set name="topic">askdesign</set></think>
+                <button>
+                    <text>Yes</text>
+                    <postback>Yes</postback>
+                </button>
+                <button>
+                    <text>No</text>
+                    <postback>No</postback>
+                </button>
+            </template>
+        </category>
+    
+    </topic>
+    
+    <topic name = "AppOrWeb">
+        
+        <category>
+            <pattern>*</pattern>
+            <template>If you want we can start over.<br/><br/>Do you still like programming?<think><set name="topic">askprogramming</set></think>
+                <button>
+                    <text>Yes</text>
+                    <postback>Yes</postback>
+                </button>
+                <button>
+                    <text>No</text>
+                    <postback>No</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Apps</pattern>
+            <template>Fantastic! I would suggest for you to be an App developer</template>
+        </category>
+        
+        <category>
+            <pattern>Web</pattern>
+            <template>Fantastic! I would suggest for you to be a Web developer</template>
+        </category>
+        
+    </topic>
+    
+</aiml>

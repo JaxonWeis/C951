@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+	<topic name = "introductions">
+	    <category>
+	        <pattern>*</pattern>
+	        <template>Please reply with "My name is..."</template>
+        </category>
+        
+        <category>
+            <pattern>MY NAME IS *</pattern>
+            <template>Nice to meet you, <set name="name"><star /></set>
+                    <br/><br/>Do you like Programming?<think><set name="topic">askprogramming</set></think>
+                    <button>
+                        <text>Yes</text>
+                        <postback>Yes</postback>
+                    </button>
+                    <button>
+                        <text>No</text>
+                        <postback>No</postback>
+                    </button>
+                    
+            </template>
+        </category>
+        
+        
+	</topic>
+
+</aiml>
+

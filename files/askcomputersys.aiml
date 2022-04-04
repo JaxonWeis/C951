@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name = "AskComputerSys">
+	
+    	<category>
+    	    <pattern>yes</pattern>
+    	    <template>Great!<br/>Would you rather work with Data or Networks?<think><set name="topic">DataOrNetworks</set></think>
+    	        <button>
+    	            <text>Data</text>
+    	            <postback>Data</postback>
+                </button>
+                <button>
+                    <text>Networks</text>
+                    <postback>Networks</postback>
+                </button>
+    	    </template>
+        </category>
+        
+        <category>
+            <pattern>no</pattern>
+            <template>Alright.<br/>That is all the categories I can think of. Lets start over.<br/>Do you like programming?<think><set name="topic">askprogramming</set></think>
+                <button>
+                    <text>Yes</text>
+                    <postback>Yes</postback>
+                </button>
+                <button>
+                    <text>No</text>
+                    <postback>No</postback>
+                </button>
+            </template>
+        </category>
+    
+    </topic>
+    
+    <topic name = "DataOrNetworks">
+        
+        <category>
+            <pattern>*</pattern>
+            <template>If you want we can start over.<br/><br/>Do you like programming?<think><set name="topic">askprogramming</set></think>
+                <button>
+                    <text>Yes</text>
+                    <postback>Yes</postback>
+                </button>
+                <button>
+                    <text>No</text>
+                    <postback>No</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Data</pattern>
+            <template>Fantastic! I would suggest for you to be a Data Administrator</template>
+        </category>
+        
+        <category>
+            <pattern>Networks</pattern>
+            <template>Fantastic! I would suggest for you to be a Network Administrator</template>
+        </category>
+        
+    </topic>
+    
+</aiml>

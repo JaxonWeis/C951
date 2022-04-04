@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+  <category>
+    <pattern>*</pattern>
+    <template>Hello, I am a Bot designed to help you choose a carrer path based on your prefrences.<br/>Are you ready to <set name="topic">start</set>?
+    <button>
+        <text>Yes</text>
+        <postback>Yes</postback>
+    </button>
+    <button>
+        <text>No</text>
+        <postback>No</postback>
+    </button>
+    </template>
+  </category>
+
+</aiml>

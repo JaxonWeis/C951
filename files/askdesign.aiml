@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<topic name = "askdesign">
+	
+    	<category>
+    	    <pattern>yes</pattern>
+    	    <template>Great!<br/>Would you rather work with Web or Apps?<think><set name="topic">AppOrWebDesign</set></think>
+    	        <button>
+    	            <text>Apps</text>
+    	            <postback>Apps</postback>
+                </button>
+                <button>
+                    <text>Web</text>
+                    <postback>Web</postback>
+                </button>
+    	    </template>
+        </category>
+        
+        <category>
+            <pattern>no</pattern>
+            <template>Alright.<br/>Do you like Computer Systems?<think><set name="topic">AskComputerSys</set></think>
+                <button>
+                    <text>Yes</text>
+                    <postback>Yes</postback>
+                </button>
+                <button>
+                    <text>No</text>
+                    <postback>No</postback>
+                </button>
+            </template>
+        </category>
+    
+    </topic>
+    
+    <topic name = "AppOrWebDesign">
+        
+        <category>
+            <pattern>*</pattern>
+            <template>If you want we can start over.<br/><br/>Do you like programming?<think><set name="topic">askprogramming</set></think>
+                <button>
+                    <text>Yes</text>
+                    <postback>Yes</postback>
+                </button>
+                <button>
+                    <text>No</text>
+                    <postback>No</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Apps</pattern>
+            <template>Fantastic! I would suggest for you to be an App designer</template>
+        </category>
+        
+        <category>
+            <pattern>Web</pattern>
+            <template>Fantastic! I would suggest for you to be a Web designer</template>
+        </category>
+        
+    </topic>
+    
+</aiml>

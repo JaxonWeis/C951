@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+	<topic name = "start">
+	    <category>
+	        <pattern>*</pattern>
+	        <template>If you are ready to start type "yes"</template>
+        </category>
+	  <category>
+          <pattern>NO</pattern>
+          <template>Sorry to hear that. Let me know when you are ready.<think><set name = "topic">*</set></think></template>
+      </category>
+      <category>
+          <pattern>YES</pattern>
+          <template>Glad to hear it. Why don't we get started by you introducing yoruself?<br/>Please respond with "My name is..." <think><set name="topic">introductions</set></think>
+                <button>
+	                <text>My name is Jaxon</text>
+	                <postback>My name is Jaxon</postback>
+                </button>
+          </template>
+      </category>
+	</topic>
+
+</aiml>
