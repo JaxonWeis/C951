@@ -1,1 +1,1 @@
-Contains the files for c951v2.
+Using the CoppeliaSim virtual robot, create a virtual prototype of an autonomous robotic recovery system that demonstrates goal-seeking behaviors in navigating through a predefined area.
